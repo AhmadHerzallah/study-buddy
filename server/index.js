@@ -29,7 +29,7 @@ app.get('/getRandomStudent', async (req, res) => {
             students = response.data.users.filter(student => student.eduPersonPrimaryAffiliation === 'Student');
 
             if (students.length === 0) {
-                console.log(`No students found for letter "${randomLetter}". Retrying...`);
+                console.log(`No students found for letter "${randomLetter} ${randomLetter2}". Retrying...`);
             }
 
         } while (students.length === 0);
